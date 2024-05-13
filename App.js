@@ -1,18 +1,25 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './login'; // Correct import
-import BookList from './Bookllist.js'; // Correct import
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import LoginPage from './login';
+import HomePage from './Home';
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/BookList" element={<BookList />} />
-      </Routes>
+      <div className="App">
+        
+              <Link to="/"></Link>
+            
+             
+            
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </div>
     </Router>
   );
-};
+}
 
 export default App;
